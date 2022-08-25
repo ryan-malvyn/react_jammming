@@ -23,7 +23,7 @@ const Spotify = {
         window.history.pushState('AccessToken',null,'/');
         return accessToken
     } else {
-        const accessUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${reidrect_uri}`
+        const accessUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}`
         window.location = accessUrl;
         console.log(accessUrl)
     }},
