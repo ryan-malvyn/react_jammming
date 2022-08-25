@@ -1,7 +1,5 @@
 let accessToken
 
-const reidrect_uri = 'https://react-jammming.vercel.app/'
-
 const Spotify = {
   getAccessToken(){
     if(accessToken){
@@ -23,7 +21,7 @@ const Spotify = {
         window.history.pushState('AccessToken',null,'/');
         return accessToken
     } else {
-        const accessUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${redirect_uri}`
+        const accessUrl = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&scope=playlist-modify-public&redirect_uri=${process.env.REACT_APP_URI_REDIRECT}`
         window.location = accessUrl;
         console.log(accessUrl)
     }},
